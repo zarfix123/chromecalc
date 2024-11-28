@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .display {
+            width: 100%;
+            max-width: 300px;
+            height: 50px;
+            margin-bottom: 10px;
+            text-align: right;
+            padding: 10px;
+            font-size: 24px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .button {
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button:active {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">/</button>
+
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">*</button>
+
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button">+</button>
+            <button class="button">C</button> <!-- Clear -->
+
+            <button class="button">Backspace</button>
+            <button class="button">sqrt</button> <!-- Square root -->
+            <button class="button">exp</button> <!-- Exponentiation -->
+            <button class="button">=</button> <!-- Equals -->
+
+            <button class="button">sin</button> <!-- Trigonometric sin -->
+            <button class="button">cos</button> <!-- Trigonometric cos -->
+            <button class="button">tan</button> <!-- Trigonometric tan -->
+
+            <button class="button" id="radDegBtn">rad</button> <!-- Rad/deg switch -->
+            <button class="button">pi</button> <!-- Pi -->
+            <button class="button">e</button> <!-- Euler's number -->
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
